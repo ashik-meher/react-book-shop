@@ -1,17 +1,74 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
+import React from 'react'
+
+import ReactDOM from 'react-dom'
+
+import headerImage from './img/space-goat.jpg';
+
 import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
 
-ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
-);
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+
+
+
+function BookList(){
+  return (<>
+     
+      <Header/>
+      <h1 className='web-heading'>The Space Goat Repository</h1>
+    <section className='booklist'>
+     
+
+   
+
+   <Book/>
+   <Book/>
+   <Book/>
+   <Book/>
+   <Book/>
+   <Book/>
+
+   
+ 
+
+    </section>
+    </>
+  )
+};
+
+const Header = () =>{
+  return <header style={{width:'100%', margin:'auto', display: 'flex', alignItems:'center', justifyContent: 'center'}}>
+  <img src={headerImage} style={{width:'100px', height:'100px', borderRadius: '50%', margin:'15px 0'}} alt='Space-goat'/>
+  
+  </header>;
+}
+
+const Book = () => {
+  return <div className='book'>
+     
+     <h2> This is a Book</h2>
+
+     <Image/>
+
+     <BookName/>
+
+     
+
+     <Author/>
+     
+
+  </div>
+}
+
+const Image = () => {
+  return <>
+  <img src="https://images-na.ssl-images-amazon.com/images/I/81eB%2B7%2BCkUL._AC_UL200_SR200,200_.jpg" alt="I love u moon and back"/>
+
+  </>
+}
+
+
+const BookName =()=> {return <h3>I love you to the moon and back</h3>}
+
+const Author = () => { return <h5>Ashik Meher Mobin</h5>}
+
+ReactDOM.render(<BookList/>, document.getElementById('root'))
