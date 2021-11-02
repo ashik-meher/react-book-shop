@@ -38,3 +38,10 @@ section h1 {
 .web-heading {
   color: skyblue;
 }
+
+.footer-content {
+  background-color: black;
+  text-align: center;
+  padding: 20px 0;
+  color: #f1f5f8;
+}

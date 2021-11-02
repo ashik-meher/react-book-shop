@@ -31,6 +31,8 @@ function BookList(){
  
 
     </section>
+
+    <Footer/>
     </>
   )
 };
@@ -70,5 +72,14 @@ const Image = () => {
 const BookName =()=> {return <h3>I love you to the moon and back</h3>}
 
 const Author = () => { return <h5>Ashik Meher Mobin</h5>}
+
+const Footer = () => {
+  return <footer className='footer-content'>
+         
+        <p style={{padding: '0'}}>Made with &#10084;&#65039; &copy; Reserved by Ashik Meher, PHP Engineer, DSS </p>
+         
+
+         </footer>
+}
 
 ReactDOM.render(<BookList/>, document.getElementById('root'))
