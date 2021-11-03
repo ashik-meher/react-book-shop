@@ -42,6 +42,36 @@ section h1 {
 .footer-content {
   background-color: black;
   text-align: center;
-  padding: 20px 0;
+  padding: 15px 0;
   color: #f1f5f8;
+}
+
+i {
+  color: #87d9e0;
+  padding: 18px 5px;
+  cursor: pointer;
+}
+
+.icon-holder {
+  padding-top: 9px;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
+.material-icons {
+  color: #87d9e0;
+  padding: 18px 5px;
+  cursor: pointer;
+}
+.spec {
+  margin-top: 1rem;
+}
+
+i,
+.material-icons:hover {
+  color: blueviolet;
+}
+.book-name {
+  color: rgb(22, 14, 2);
+  font-size: 19px;
 }

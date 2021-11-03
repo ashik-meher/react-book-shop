@@ -8,13 +8,11 @@ import './index.css';
 
 
 
-
-
 function BookList(){
   return (<>
      
       <Header/>
-      <h1 className='web-heading'>The Space Goat Repository</h1>
+      <h2 className='web-heading'>The Space Goat</h2>
     <section className='booklist'>
      
 
@@ -47,7 +45,7 @@ const Header = () =>{
 const Book = () => {
   return <div className='book'>
      
-     <h2> This is a Book</h2>
+     <h4> This is a Book</h4>
 
      <Image/>
 
@@ -56,7 +54,48 @@ const Book = () => {
      
 
      <Author/>
+
+     <button className='btn btn-primary spec'>ORDER NOW </button>
+
      
+
+
+     <div className='icon-holder'>
+
+       <a href=''><span class="material-icons">
+verified
+</span></a>
+      <span class="material-icons">
+    all_inclusive
+</span>
+
+
+
+<span class="material-icons">
+favorite
+</span>
+
+<span class="material-icons">
+info
+</span>
+
+
+
+        
+     
+      <i class="material-icons">add</i>
+
+      <i class="small material-icons">insert_chart</i>
+
+
+      <i class="small material-icons">      account_circle</i>
+     
+
+
+     </div>
+
+
+
 
   </div>
 }
@@ -69,17 +108,20 @@ const Image = () => {
 }
 
 
-const BookName =()=> {return <h3>I love you to the moon and back</h3>}
+const BookName =()=> {return <h5 className='book-name'>I love you to the moon and back</h5>}
 
-const Author = () => { return <h5>Ashik Meher Mobin</h5>}
+const Author = () => { return <h6> Author: Ashik Meher Mobin</h6>}
 
 const Footer = () => {
   return <footer className='footer-content'>
          
-        <p style={{padding: '0'}}>Made with &#10084;&#65039; &copy; Reserved by Ashik Meher, PHP Engineer, DSS </p>
+        <p style={{padding: '0'}}>Made with &#10084;&#65039; &copy; Reserved by DSS </p>
          
 
          </footer>
 }
+
+
+
 
 ReactDOM.render(<BookList/>, document.getElementById('root'))
