@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css?family=Patrick+Hand+SC|Roboto&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -36,7 +37,8 @@ section h1 {
   padding: 1rem 2rem;
 }
 .web-heading {
-  color: skyblue;
+  color: #106b62;
+  letter-spacing: 0.16rem;
 }
 
 .footer-content {
@@ -59,7 +61,7 @@ i {
   display: flex;
 }
 .material-icons {
-  color: #87d9e0;
+  color: #106b62;
   padding: 18px 5px;
   cursor: pointer;
 }
@@ -73,5 +75,31 @@ i,
 }
 .book-name {
   color: rgb(22, 14, 2);
-  font-size: 19px;
+  font-size: 17px;
+  color: #106b62;
+}
+.author {
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  letter-spacing: 0.1rem;
+}
+.love {
+  color: red;
+  font-family: fantasy;
+  font-weight: bold;
+  font-size: 29px;
+}
+.loveCounter {
+  color: red;
+  font-family: fantasy;
+  font-weight: bold;
+  font-size: 29px;
+}
+.navlogo {
+  margin-left: 1rem;
+  margin-top: 1rem;
+  width: 40px;
+  height: 40px;
+}
+.blue {
+  margin-bottom: 10px;
 }
