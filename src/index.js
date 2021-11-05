@@ -17,11 +17,12 @@ const bookName = 'I Love You to the moon and back';
 
 function BookList(){
   return (<>
+    <TavBar/>
      
       <Header/>
-      <h2 className='web-heading'>Space Goat AeroSpace INC. </h2>
+      <h2 className='web-heading'>Space Goat AeroSpace Inc. </h2>
 
-      <TavBar/>
+    
     <section className='booklist'>
      
 
@@ -46,7 +47,7 @@ function BookList(){
 
 const Header = () =>{
   return <header style={{width:'100%', margin:'auto', display: 'flex', alignItems:'center', justifyContent: 'center'}}>
-  <img src={headerImage} style={{width:'100px', height:'100px', borderRadius: '50%', margin:'15px 0'}} alt='Space-goat'/>
+  <img src={headerImage} style={{width:'100px', height:'100px', borderRadius: '50%', margin:'85px 0 0 0'}} alt='Space-goat'/>
   
   </header>;
 }
@@ -97,7 +98,7 @@ info
       <i className="small material-icons">insert_chart</i>
 
 
-      <i className="small material-icons">      account_circle</i>
+      <i className="small material-icons">account_circle</i>
      
 
 
@@ -165,7 +166,7 @@ const NavBar = () => {
 }
 
 const TavBar = () => {
-    return <div><nav className="teal lighten-2" style={{padding:'0px 10px', position: 'static'}}>
+    return <div><nav className="blue darken-2" style={{padding:'0px 10px', position: 'fixed'}}>
 	<div className="nav-wrapper">
 		<a href="#" className="brand-logo"> <img className="navlogo" src={navImage}></img></a>
 
@@ -175,10 +176,13 @@ const TavBar = () => {
 
 		<ul className="right hide-on-med-and-down "  >
 			<li><a href="#">FLIGHTS</a></li>
-			<li><a href="#">PRIVATE JET</a></li>
+			<li><a href="#">HIRE PRIVATE JETS</a></li>
 			<li><a href="#">CHARTERS</a></li>
-			<li><a href="#">SELF DRIVING DRONES</a></li>
+			<li><a href="#">UBER AUTONOMOUS DRONES</a></li>
 			<li><a href="#">CHOPER SERVICE</a></li>
+        <li><a href="sass.html"><i class="material-icons aila">search</i></a></li>
+      <li><a href="badges.html"><i class="material-icons aila">view_module</i></a></li>
+    
 		</ul>
 	</div>
 </nav>
