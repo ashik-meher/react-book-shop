@@ -9,10 +9,39 @@ import navImage from './img/spc-goat.png';
 import './index.css';
 
 
+const secondBook = {
+  bookName: 'I Love You to the moon and back',
+  author: 'Ashik Meher Mobin',
+  img: 'https://images-na.ssl-images-amazon.com/images/I/81eB%2B7%2BCkUL._AC_UL200_SR200,200_.jpg'
+};
+
+const thirdBook = {
+
+  bookName: 'Welcome to the World : keepsake gift book for a new baby',
+  author: 'Lucy Tapper , Steve Wilson',
+  img: 'https://m.media-amazon.com/images/I/71VziYQJR7L._AC_UY218_.jpg'
+
+}
+
+const fourthBook = {
+
+  bookName: 'Maisy Goes on a Plane: A Maisy First Experiences Book',
+  author: 'Lucy Cousins',
+  img: 'https://m.media-amazon.com/images/I/91Yn0eOwpxL._AC_UY218_.jpg'
+
+}
 
 const bookName = 'I Love You to the moon and back';
 
+//const bookNamei = 'Ok Man';
 
+const author = 'Ashik Meher Mobin The Great';
+
+const job = 'Software Architec';
+
+const jobs = ['Developer', 'Engineer', 'Artist', 'Bekar', 'Project Manager', 'Scientist'];
+
+const imgSrc = 'https://images-na.ssl-images-amazon.com/images/I/81eB%2B7%2BCkUL._AC_UL200_SR200,200_.jpg';
 
 
 function BookList(){
@@ -28,12 +57,13 @@ function BookList(){
 
    
 
-   <Book/>
-   <Book/>
-   <Book/>
-   <Book/>
-   <Book/>
-   <Book/>
+   <Book job={job} author={author} bookName={bookName} image={imgSrc}  > <p>Is is the Children Batku?</p> </Book>
+   <Book job={jobs[0]} title='Sagol Premi' author={thirdBook.author} bookName={thirdBook.bookName} image={thirdBook.img} ></Book>
+   <Book author={secondBook.author} author={fourthBook.author} bookName={fourthBook.bookName} image={fourthBook.img}></Book>
+   <Book job={jobs[2]} ></Book>
+   <Book job={jobs[5]} ></Book>
+   <Book job={jobs[4]} ></Book>
+  
 
    
  
@@ -52,20 +82,35 @@ const Header = () =>{
   </header>;
 }
 
-const Book = () => {
+const Book = (props) => {
+  console.log(props);
   return <div className='book'>
      
    
 
-     <Image/>
+       <img src={props.image} alt="I love u moon and back"/>
 
-     <BookName/>
+        <h5 className='book-name'>
+          {/*bookName.toUpperCase()*/}
+          {props.bookName}
+        </h5>
 
-     
+        <h6 className='author'>
+          <b> AVIATOR  </b> {props.author}
+        </h6>
 
-     <Author/>
+      
+
+
 
      <button className='btn btn-primary spec'>BOOK NOW</button>
+     <br/>
+
+    <button className="btn btn-primary">{props.job}</button>
+  
+   
+   <p>{props.title}</p>
+     
 
      
 
@@ -111,23 +156,34 @@ info
 
   </div>
 }
-
+//Individual elements
+/*
 const Image = () => {
   return <>
-  <img src="https://images-na.ssl-images-amazon.com/images/I/81eB%2B7%2BCkUL._AC_UL200_SR200,200_.jpg" alt="I love u moon and back"/>
+  <img src={imgSrc} alt="I love u moon and back"/>
 
   </>
 }
 
 
-const BookName =()=> {return <h5 className='book-name'>{bookName.toUpperCase()}</h5>}
+const BookName =()=> {
+  return <h5 className='book-name'>
+    {bookName.toUpperCase()}
+    </h5>
+    }
 
-const Author = () => { return <h6 className='author'><b> AVIATOR </b> Ashik Meher Mobin</h6>}
+const Author = (props) => { 
+  return <h6 className='author'>
+    <b> AVIATOR  </b> {props.author}
+    </h6>
+    }
+
+*/
 
 const Footer = () => {
   return <footer className='footer-content'>
          
-        <p style={{padding: '0'}}>Made with &#10084;&#65039; &copy; Reserved by DSS </p>
+        <p style={{padding: '0'}}>Made with &#10084;&#65039; All &copy;Copyright Reserved by DSS 1992-2021 </p>
          
 
          </footer>
@@ -149,7 +205,7 @@ const LoveCounter = () =>{
   </div>
   
 }
-
+/*
 const NavBar = () => {
   return <nav>
     <div class="nav-wrapper">
@@ -164,7 +220,7 @@ const NavBar = () => {
   </nav>
 
 }
-
+*/
 const TavBar = () => {
     return <div><nav className="blue darken-2" style={{padding:'0px 10px', position: 'fixed'}}>
 	<div className="nav-wrapper">
@@ -175,11 +231,11 @@ const TavBar = () => {
 		</a>
 
 		<ul className="right hide-on-med-and-down "  >
-			<li><a href="#">FLIGHTS</a></li>
-			<li><a href="#">HIRE PRIVATE JETS</a></li>
-			<li><a href="#">CHARTERS</a></li>
-			<li><a href="#">UBER AUTONOMOUS DRONES</a></li>
-			<li><a href="#">CHOPER SERVICE</a></li>
+			<li><a href="https://google.com">FLIGHTS</a></li>
+			<li><a href="https://google.com">HIRE PRIVATE JETS</a></li>
+			<li><a href="https://google.com">CHARTERS</a></li>
+			<li><a href="https://google.com">UBER AUTONOMOUS DRONES</a></li>
+			<li><a href="https://google.com">CHOPER SERVICE</a></li>
         <li><a href="sass.html"><i class="material-icons aila">search</i></a></li>
       <li><a href="badges.html"><i class="material-icons aila">view_module</i></a></li>
     
@@ -189,11 +245,11 @@ const TavBar = () => {
 
 
 <ul class="sidenav" id="mobile-nav">
-	    <li><a href="#">Home</a></li>
-			<li><a href="#">Video</a></li>
-			<li><a href="#">Service</a></li>
-			<li><a href="#">About</a></li>
-			<li><a href="#">Contact</a></li>
+	    <li><a href="https://google.com">Home</a></li>
+			<li><a href="https://google.com">Video</a></li>
+			<li><a href="https://google.com">Service</a></li>
+			<li><a href="https://google.com">About</a></li>
+			<li><a href="https://google.com">Contact</a></li>
 </ul>
 </div>
 
@@ -203,7 +259,7 @@ const TavBar = () => {
 let clicka = () => {
   console.log('hAHA');
    let loveCounter = document.querySelectorAll('.loveCounter');
-   let love = document.querySelector('.love');
+   //let love = document.querySelector('.love');
 
   for( let c=0; c< loveCounter.length;c++){
        let lv= parseInt(loveCounter[c].innerHTML);
