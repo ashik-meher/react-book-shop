@@ -1,0 +1,21 @@
+.nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 20px;
+    background-color: antiquewhite;
+    margin: 0;
+
+}
+
+.nav-link{
+    background-color: aqua;
+    padding: 5px 10px;
+    color: rebeccapurple;
+    font-weight: bold;
+}
+.section{
+    padding: 30px 40px;
+    background-color: aquamarine;
+    color: rebeccapurple;
+}
