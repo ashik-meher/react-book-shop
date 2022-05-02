@@ -2,26 +2,37 @@ import React from "react";
 
 //import ReactDOM from "react-dom";
 
+import ProductCounter from "./productCounter";
+
 const cardStyle = {
-    width:'400px',
+    width:'250px',
     //height: '350px',
     margin: '5px',
+    height:'550px'
 
 }
-const name = 'Diploma Milk';
-const img = 'https://images.othoba.com/images/thumbs/0347117_diploma-instant-full-cream-milk-powder-500gm.jpeg';
+
+const imgStyle = {
+    height:'250px',
+
+}
+//const name = 'Diploma Milk';
+//const img = 'https://images.othoba.com/images/thumbs/0347117_diploma-instant-full-cream-milk-powder-500gm.jpeg';
+
 
 const products = [
     {
         name:'Diploma Milk',
         pricePerUnit: 480,
-        img:'https://images.othoba.com/images/thumbs/0347117_diploma-instant-full-cream-milk-powder-500gm.jpeg'
+        img:'https://images.othoba.com/images/thumbs/0347117_diploma-instant-full-cream-milk-powder-500gm.jpeg',
+        loved: 86433,
 
     },
     {
         name:'Mosar Coil',
         pricePerUnit: 8,
         img:'https://www.sydney.edu.au/content/dam/corporate/images/news-and-opinion/news/2017/december/mosquito%20coil.jpg',
+        loved: 382,
 
     },
     {
@@ -29,6 +40,7 @@ const products = [
         pricePerUnit: 40,
         img:'https://cdn.shopify.com/s/files/1/0444/7639/9768/products/LacchaSemai.png?v=1620022380',
         isNew: 'New',
+        loved: 4738,
 
 
     },
@@ -36,6 +48,7 @@ const products = [
         name:'Chinigura Rice',
         pricePerUnit: 140,
         img:'https://static-01.daraz.com.bd/p/0270fbb10f99f3275163f8cc6517e052.jpg',
+        loved: 9114,
 
 
 
@@ -51,18 +64,21 @@ const Product = (props) => {
       <div className="card" style={cardStyle}>
         
         
-              <img className="card-image-top" src={/*img*/ props.img} alt="Banana"></img>
+              <img className="card-image-top" style={imgStyle}src={/*img*/ props.img} alt="Banana"></img>
 
         
 
           <div className="card-body">
 
-              <h1>Item Name: {/*name*/} {props.name}</h1>
-              <h3>Price: {props.pricePerUnit}</h3>
+              <h5>Item Name: {/*name*/} {props.name}</h5>
+              <h6>Price: {props.pricePerUnit}</h6>
 
               {props.isNew === "New"? <p>New Product</p>:<p>OLD IS GOLD</p>}
 
               {props.pricePerUnit > 100 ? <button className="btn btn-danger">EXPENSIVE PRODUCT</button>:''}
+
+
+              <ProductCounter loved={props.loved}/>
 
               
           
@@ -82,7 +98,7 @@ function ProductList (){
             <div className="row">
 
                 {products.map((e) => {
-                    return   (<Product  key={e.name} name={e.name} pricePerUnit={e.pricePerUnit} img={e.img} isNew={e.isNew} />)
+                    return   (<Product  key={e.name} name={e.name} pricePerUnit={e.pricePerUnit} img={e.img} isNew={e.isNew} loved={e.loved} />)
                 })}
              
 
