@@ -15,6 +15,8 @@ import ProductList from './product';
 
 import Customer from './customers/customer';
 
+import ProjectList from "./projects/project";
+
 const validURI = 'http://www.google.com';
 
 
@@ -51,6 +53,10 @@ function App (){
 
 
         <Customer/>
+
+        <ProjectList/>
+
+        
 
 
         </>

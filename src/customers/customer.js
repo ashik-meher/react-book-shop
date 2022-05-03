@@ -4,12 +4,23 @@ import React, {useState, useEffect} from 'react';
 const customerSectionStyle = {
     display: 'flex',
     alignItems: 'center',
-    justifyContent: 'center',
-    minHeight: '200px',
+    justifyContent: 'space-evenly',
+    minHeight: '300px',
+    padding: '20px',
 }
 
 const cusStyle = {
     display: 'flex'
+
+}
+
+const customerSectionHeading = {
+    textAlign: 'center',
+}
+
+const customCard = {
+    padding: '10px',
+    minWidth: '150px',
 
 }
 
@@ -50,8 +61,11 @@ const getCustomers =  async () => {
 
  
   return (
-    <div style={customerSectionStyle} className="row">
-        <h4> Here is all our happy customers!</h4>
+  <>
+      <h4 style={customerSectionHeading}> Here is all our happy customers!</h4>
+  
+    <div style={customerSectionStyle} >
+    
 
       
 
@@ -60,7 +74,7 @@ const getCustomers =  async () => {
 
             return (
                 <>
-                  <div className='card' key={id}>
+                  <div className='card' style={customCard} key={id}>
                       
                       <h5>{name}</h5>
                       <h6>{professional}</h6>
@@ -76,5 +90,9 @@ const getCustomers =  async () => {
 
 
     </div>
+
+
+   </>
   )
+
 }
