@@ -7,7 +7,10 @@ const bgBannerImage =  'https://952219.smushcdn.com/2603432/wp-content/uploads/2
 const sectionStyle = {
     backgroundImage: 'url("'+bgBannerImage+'")',
     minHeight: '350px',
-    marginBottom: '20px'
+    marginBottom: '20px',
+    backgroundRepeat: 'no-repeat',
+    backgroundAttachment: 'fixed',
+    backgroundSize: 'cover',
 };
 
 const introStyle = {

@@ -3,6 +3,8 @@ import React, {useState, useEffect} from 'react'
 
 const projectListHeading = {
   textAlign: 'center',
+  color: 'red',
+  padding: '10px',
 }
 
 const customCard = {

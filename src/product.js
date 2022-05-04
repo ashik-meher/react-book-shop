@@ -16,8 +16,20 @@ const imgStyle = {
     height:'250px',
 
 }
-//const name = 'Diploma Milk';
-//const img = 'https://images.othoba.com/images/thumbs/0347117_diploma-instant-full-cream-milk-powder-500gm.jpeg';
+
+const productListHeading = {
+  textAlign: 'center',
+  color: 'red',
+  padding: '10px',
+}
+
+const marqContainer = {
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'space-evenly',
+    color: 'skyblue',
+
+}
 
 
 const products = [
@@ -93,8 +105,22 @@ function ProductList (){
     return (
         <>
 
-        <div className="container">
+        <div className="container"> 
 
+          <h4 style={productListHeading}>  <i class="fa fa-cart-arrow-down" aria-hidden="true"></i>&nbsp;Product Catalog to our inventroy 24X7 Home Delivery</h4>
+
+        <div >
+
+          <marquee style={marqContainer}><h6> <i class="fa fa-truck" aria-hidden="true"></i> FREE SHIPPING INSIDE BANGLADESH   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                 You Can Rely on our imported products    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                 No Day Off for Customer Support    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  <i> <i class="fa fa-phone" aria-hidden="true"></i> call at 789</i>    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  </h6>  </marquee>
+
+
+          </div>
+
+         
             <div className="row">
 
                 {products.map((e) => {

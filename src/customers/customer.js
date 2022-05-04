@@ -8,14 +8,17 @@ const customerSectionStyle = {
     minHeight: '300px',
     padding: '20px',
 }
-
+/*
 const cusStyle = {
     display: 'flex'
 
 }
+*/
 
 const customerSectionHeading = {
     textAlign: 'center',
+    color: 'skyblue',
+    marginTop: '50px',
 }
 
 const customCard = {

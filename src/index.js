@@ -17,18 +17,23 @@ import Customer from './customers/customer';
 
 import ProjectList from "./projects/project";
 
+import TeamMembers from "./team/team";
+
 const validURI = 'http://www.google.com';
 
 
 
 
+const navStyle = {
+    backgroundColor: '#D9E2E2',
 
+};
 
 const Nav = () => {
     return <>
            
 
-          <ul className="nav">
+          <ul className="nav" style={navStyle}>
               <li ><a className="nav-link" href={validURI}>Home</a></li>
               <li><a className="nav-link" href={validURI}>Shop</a></li>
                 <li><a className="nav-link" href={validURI}>Legacy</a></li>
@@ -55,6 +60,10 @@ function App (){
         <Customer/>
 
         <ProjectList/>
+
+
+
+        <TeamMembers/>
 
         
 
