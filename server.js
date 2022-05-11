@@ -30,7 +30,10 @@ app.get('/man', (req, res) => {
 
 app.get('/api', (req, res) => {
 
-    res.setHeader('Access-Control-Allow-Origin', 'http://localhost:3000');
+    //res.setHeader('Access-Control-Allow-Origin', 'http://localhost:3000');
+
+    res.setHeader('Access-Control-Allow-Origin', '*');
+
 
     const customers = [
         {

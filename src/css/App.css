@@ -2,16 +2,16 @@
     display: flex;
     align-items: center;
     justify-content: space-evenly;
-    padding: 20px;
+    padding: 35px 0;
     background-color: antiquewhite;
     margin: 0;
 
 }
 
 .nav-link{
-    background-color: pink;
-    padding: 10px 20px;
-    color: rebeccapurple;
+    background-color: white;
+    padding: 50px 20px;
+    color: #22A03A;
     font-weight: bold;
 }
 .section{

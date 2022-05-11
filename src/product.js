@@ -19,7 +19,7 @@ const imgStyle = {
 
 const productListHeading = {
   textAlign: 'center',
-  color: 'red',
+  color: '#22A03A',
   padding: '10px',
 }
 
@@ -107,7 +107,7 @@ function ProductList (){
 
         <div className="container"> 
 
-          <h4 style={productListHeading}>  <i class="fa fa-cart-arrow-down" aria-hidden="true"></i>&nbsp;Product Catalog to our inventroy 24X7 Home Delivery</h4>
+          <h4 style={productListHeading}>  <i class="fa fa-cart-arrow-down" aria-hidden="true"></i>&nbsp; &nbsp; Product Catalog || 24X7 Home Delivery</h4>
 
         <div >
 

@@ -11,6 +11,8 @@ const sectionStyle = {
     backgroundRepeat: 'no-repeat',
     backgroundAttachment: 'fixed',
     backgroundSize: 'cover',
+    paddingLeft: '150px',
+    color: '#22A03A',
 };
 
 const introStyle = {

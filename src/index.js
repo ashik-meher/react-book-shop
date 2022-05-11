@@ -19,26 +19,44 @@ import ProjectList from "./projects/project";
 
 import TeamMembers from "./team/team";
 
+import Subscribers from "./subs/subscriber";
+
 const validURI = 'http://www.google.com';
 
 
 
 
 const navStyle = {
-    backgroundColor: '#D9E2E2',
+    backgroundColor: '#22A03A',
+
 
 };
+
+const navLink = {
+    color: '#22A03A',
+    padding: '7px 20px',
+
+    "&:hover": {
+        'background': 'red',
+    }
+
+    
+}
+
+
+
+
 
 const Nav = () => {
     return <>
            
 
           <ul className="nav" style={navStyle}>
-              <li ><a className="nav-link" href={validURI}>Home</a></li>
-              <li><a className="nav-link" href={validURI}>Shop</a></li>
-                <li><a className="nav-link" href={validURI}>Legacy</a></li>
+              <li ><a className="nav-link" style={navLink} href={validURI}>HOME</a></li>
+              <li><a className="nav-link" style={navLink} href={validURI}>SHOP</a></li>
+              <li><a className="nav-link" style={navLink} href={validURI}>LEGACY</a></li>
 
-             <li><a className="nav-link" href={validURI}>Services</a></li>
+              <li><a className="nav-link" style={navLink} href={validURI}>SERVICES</a></li>
 
 
           </ul>
@@ -64,6 +82,8 @@ function App (){
 
 
         <TeamMembers/>
+
+        <Subscribers/>
 
         
 
